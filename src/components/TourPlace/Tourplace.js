@@ -7,7 +7,7 @@ const Tourplace = () => {
 
   useEffect(() => {
 
-    fetch('http://localhost:5000/tourplace')
+    fetch('https://calm-mesa-85392.herokuapp.com/tourplace')
       .then(res => res.json())
 
       .then(data => settourplace(data))
