@@ -1,0 +1,17 @@
+.contactus-color
+{
+  background-color: #E50081 !important;
+  color:white;
+}
+.title-contactus{
+  color:#00ea0f !important;
+}
+.btn-submit
+{
+  background-color:#00ea0f !important;
+}
+.btn-submit:hover{
+  background-color: white !important;
+  color:#E50081;
+
+}

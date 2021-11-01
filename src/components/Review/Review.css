@@ -1,0 +1,16 @@
+.icon-color
+{
+  color:rgb(255, 0, 128);
+}
+.card-images
+{
+  width: 200px;
+  height: 200px;
+  margin:10px auto;
+  
+  border-radius: 50%;
+}
+.rating-setting
+{
+  margin-left:50px;
+}

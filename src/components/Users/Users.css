@@ -1,0 +1,13 @@
+.profile-Picture
+{
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+.link-style
+{
+  list-style-type: none; 
+background-color: blue;
+margin:15px;
+color:white;
+}

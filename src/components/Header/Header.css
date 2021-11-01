@@ -1,0 +1,33 @@
+.header{
+    margin-top: 10px;
+}
+.btn-color
+{
+    background-color:#E50081 ;
+    color:white;
+}
+.header nav a{
+    text-decoration: none;
+    margin-right: 20px;
+    color: black;
+    padding: 0 5px;
+    
+}
+.signup-right
+{
+    margin-left:20px;
+}
+.header nav a:hover{
+    background-color: lightblue;
+    color: black;
+}
+.bg-color-design
+{
+    background-color: #5608FF;
+}
+.profile-image
+{
+  width: 40px;
+  border-radius: 50%;
+  margin-right:10px;
+}
