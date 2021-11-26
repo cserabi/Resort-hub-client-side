@@ -1,6 +1,5 @@
 import React, { useRef } from 'react';
 import { Form } from 'react-bootstrap';
-import PrivateRoute from '../../Constext/PrivateRoute';
 
 const AddUser = () => {
 
