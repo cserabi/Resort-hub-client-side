@@ -30,7 +30,8 @@ const AddUser = () => {
 
             .then(res => res.json())
             .then(data => {
-                if (data.insertedId > 0) {
+                if (data > 0) {
+
                     alert('successfully Booking added');
                     e.target.reset();
                 }
