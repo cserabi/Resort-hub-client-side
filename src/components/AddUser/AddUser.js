@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import { Form } from 'react-bootstrap';
+import './AddUser.css';
 
 const AddUser = () => {
 
@@ -30,9 +31,11 @@ const AddUser = () => {
             .then(res => res.json())
             .then(data => {
                 if (data.insertedId > 0) {
-                    alert('successfully added new user');
+                    alert('successfully Booking added');
                     e.target.reset();
                 }
+
+
             })
         e.preventDefault();
     }
@@ -84,7 +87,7 @@ const AddUser = () => {
                                 <label htmlFor="floatingPasswordCustom">Place your image link </label>
                             </Form.Floating>
 
-                            <input type="submit" value="add" className="btn btn-primary btn-organization p-3 w-100 mb-3" />
+                            <input type="submit" value="Book Now" className="btn btn-primary btn-organization p-3 w-100 mb-3 bookbtn" />
                         </Form>
 
                     </div>

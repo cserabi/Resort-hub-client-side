@@ -1,0 +1,14 @@
+.tx-bg {
+  background-color: #E50081;
+  color: white !important;
+  padding: 5px;
+  width: 300px;
+  margin: auto;
+  text-align: center;
+}
+
+.tx-inside {
+  font-size: 18px;
+  padding: 5px 10px;
+  color: white !important;
+}
