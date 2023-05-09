@@ -7,16 +7,25 @@ import Users from "./components/Users/Users";
 import Header from './components/Header/Header';
 import Footer from "./components/Footer/Footer";
 import FAQ from "./components/FAQ/FAQ";
-import Review from "./components/Review/Review";
+
 import Login from "./components/Login/Login";
 import AuthProvider from "./Constext/AuthProvider";
 import PrivateRoute from "./Constext/PrivateRoute";
 import Notfound from "./components/NOTFOUND/Notfound";
 import Tourplace from "./components/TourPlace/Tourplace";
 import Contactus from "./components/ContactUs/Contactus";
+import Addreview from "./components/Addreview/Addreview";
+import Review from "./components/Review/Review";
+import Reviewer from "./components/Reviewer/Reviewer";
+import Reviews from "./Reviews/Reviews";
+
+
+
+
 
 
 function App() {
+
   return (
 
     <AuthProvider>
@@ -27,15 +36,20 @@ function App() {
           <Route exact path="/">
             <Home></Home>
           </Route>
-          <Route path="/home">
+          <Route exact path="/home">
             <Home></Home>
+
           </Route>
           <PrivateRoute exact path="/users">
             <Users></Users>
           </PrivateRoute>
+          <PrivateRoute exact path="/addreview">
+            <Addreview></Addreview>
+          </PrivateRoute>
           <PrivateRoute exact path="/users/add">
             <AddUser></AddUser>
           </PrivateRoute>
+
 
 
           <Route path="/users/update/:id">
@@ -43,6 +57,16 @@ function App() {
           </Route>
           <Route path="/FAQ">
             <FAQ></FAQ>
+
+
+          </Route>
+
+          <Route exact path="/review">
+
+
+            <Reviews></Reviews>
+
+
 
           </Route>
 
@@ -59,9 +83,7 @@ function App() {
             </Tourplace>
           </Route>
 
-          <Route path="/review">
-            <Review></Review>
-          </Route>
+
           <Route path="/contactus">
             <Contactus></Contactus>
           </Route>

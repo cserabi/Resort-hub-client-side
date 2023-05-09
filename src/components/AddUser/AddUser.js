@@ -17,7 +17,7 @@ const AddUser = () => {
 
         const newuser = { name, Day, phone, image }
 
-        fetch('https://calm-mesa-85392.herokuapp.com/users', {
+        fetch('http://localhost:5000/users', {
 
             method: 'POST',
             headers: {

@@ -1,78 +1,65 @@
-import React from 'react';
-import { Form, Row, Col, Button } from 'react-bootstrap';
-import './Contactus';
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
+import './Contactus.css';
+import { Nav } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
-const Contactus = () => {
+export const Contactus = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_9bo958e', 'service_9bo958e', form.current, 'YOUR_PUBLIC_KEY')
+      .then((result) => {
+        console.log(result.text);
+      }, (error) => {
+        console.log(error.text);
+      });
+  };
+
   return (
-    <div>
-      <div className="container my-3">
-        <h3 className="title-contactus text-center">Contact Us </h3>
-        <div className="row">
-          <div className="col-md-2">
 
-          </div>
-          <div className="col-md-8 contactus-color shadow">
 
-            <Form>
+    <div className='container'>
+      <div className="row">
 
-              <Row className="mb-3">
-                <Form.Group as={Col} controlId="formGridEmail">
-                  <Form.Label>Email</Form.Label>
-                  <Form.Control type="email" placeholder="Enter email" />
-                </Form.Group>
+        <div className="col-md-4"></div>
+        <div className="col-md-4 bg-contact">
+          <form ref={form} onSubmit={sendEmail}>
 
-                <Form.Group as={Col} controlId="formGridPassword">
-                  <Form.Label>Password</Form.Label>
-                  <Form.Control type="password" placeholder="Password" />
-                </Form.Group>
-              </Row>
+            <h3>Contact Us </h3>
+            <label>Name</label>
+            <br></br>
+            <input type="text" name="user_name" className='box' />
+            <br></br>
+            <label>Email</label>
+            <br></br>
+            <input type="email" name="user_email" className='box' />
+            <br></br>
+            <label>Message</label>
+            <br></br>
+            <textarea name="message" className='box' />
+            <br></br>
+            <input type="submit" value="Send" className='submit-box' />
+          </form>
+        </div >
 
-              <Form.Group className="mb-3" controlId="formGridAddress1">
-                <Form.Label>Address</Form.Label>
-                <Form.Control placeholder="1234 Main St" />
-              </Form.Group>
+        <div className="col-md-4"></div>
+      </div >
 
-              <Form.Group className="mb-3" controlId="formGridAddress2">
-                <Form.Label>Address 2</Form.Label>
-                <Form.Control placeholder="Apartment, studio, or floor" />
-              </Form.Group>
+      <div className='row'>
+        <div className='col-md-4'></div>
 
-              <Row className="mb-3">
-                <Form.Group as={Col} controlId="formGridCity">
-                  <Form.Label>City</Form.Label>
-                  <Form.Control />
-                </Form.Group>
 
-                <Form.Group as={Col} controlId="formGridState">
-                  <Form.Label>State</Form.Label>
-                  <Form.Select defaultValue="Choose...">
-                    <option>Choose...</option>
-                    <option>...</option>
-                  </Form.Select>
-                </Form.Group>
-
-                <Form.Group as={Col} controlId="formGridZip">
-                  <Form.Label>Zip</Form.Label>
-                  <Form.Control />
-                </Form.Group>
-              </Row>
-
-              <Form.Group className="mb-3" id="formGridCheckbox">
-                <Form.Check type="checkbox" label="Check me out" />
-              </Form.Group>
-
-              <Button variant="primary" className="my-3 btn-submit" type="submit">
-                Submit
-              </Button>
-            </Form>
-          </div>
-          <div className="col-md-2">
-
-          </div>
+        <div className='col-md-4'>
 
         </div>
+
+        <div className='col-md-4'></div>
       </div>
-    </div>
+
+    </div >
   );
 };
 

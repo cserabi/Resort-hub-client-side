@@ -7,7 +7,7 @@ const Tourplace = () => {
 
   useEffect(() => {
 
-    fetch('https://calm-mesa-85392.herokuapp.com/tourplace')
+    fetch('http://localhost:5000/tourplace')
       .then(res => res.json())
 
       .then(data => settourplace(data))
@@ -36,7 +36,7 @@ const Tourplace = () => {
                 <p class="card-text"> Tour Place : {tourplace.locName}</p>
                 <p class="card-text"> Description : {tourplace.des}</p>
                 <p class="card-text"> Day Time Out : {tourplace.dayTimeout}</p>
-                <p class="card-text"> price : {tourplace.Price}</p>
+                <p class="card-text"> price : {tourplace.Price} Taka</p>
 
                 <Link to='/users/add'><button className="btn btn-primary">Booking Now</button> </Link>
 

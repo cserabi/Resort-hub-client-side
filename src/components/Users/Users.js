@@ -8,7 +8,7 @@ const Users = () => {
 
     useEffect(() => {
 
-        fetch('https://calm-mesa-85392.herokuapp.com/users')
+        fetch('http://localhost:5000/users')
             .then(res => res.json())
             .then(data => setUsers(data))
 
@@ -22,7 +22,7 @@ const Users = () => {
         const proceed = window.confirm('Are you sure , you want to delete?')
 
         if (proceed) {
-            const url = `https://calm-mesa-85392.herokuapp.com/users/${id}`;
+            const url = `http://localhost:5000/users/${id}`;
             fetch(url, {
 
                 method: 'DELETE'

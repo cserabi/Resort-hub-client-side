@@ -10,8 +10,27 @@
   border-radius: 50%;
 }
 
+.review-box {
+  background-color: #dfdfdf;
+}
+
 .rating-setting {
   margin-left: 50px;
+}
+
+.text-dark-pro {
+  margin-top: 200px;
+  margin-right: auto;
+  color: #e50081 !important;
+}
+
+.profile-images {
+
+  width: 150px;
+  margin: auto;
+  margin-left: 10px;
+  margin-bottom: 150px;
+  margin-top: 80px;
 }
 
 .drop-review {

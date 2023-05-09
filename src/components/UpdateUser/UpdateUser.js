@@ -7,7 +7,7 @@ const UpdateUser = () => {
     const { id } = useParams();
 
     useEffect(() => {
-        const url = `https://calm-mesa-85392.herokuapp.com/${id}`;
+        const url = `http://localhost:5000/${id}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setUser(data));
@@ -57,7 +57,7 @@ const UpdateUser = () => {
     }
     const handleUpdateUser = e => {
 
-        const url = `https://calm-mesa-85392.herokuapp.com/${id}`;
+        const url = `http://localhost:5000/${id}`;
 
         fetch(url, {
             method: 'PUT',
